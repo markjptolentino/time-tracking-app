@@ -1,26 +1,57 @@
-// Function to create snowflakes
-function createSnowflakes() {
-    const snowflakeCount = 100; // Number of snowflakes to create
-    const body = document.body;
-
-    for (let i = 0; i < snowflakeCount; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        
-        // Randomize the size of each snowflake
-        const size = Math.random() * 10 + 5; // Snowflakes between 5px and 15px
-        snowflake.style.width = `${size}px`;
-        snowflake.style.height = `${size}px`;
-        
-        // Randomize the starting position of each snowflake
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.animationDuration = `${Math.random() * 10 + 10}s`; // Randomize animation duration between 10 and 20 seconds
-        snowflake.style.animationDelay = `${Math.random() * 5}s`; // Delay the start for some snowflakes
-        
-        body.appendChild(snowflake);
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-// Call the function to generate snowflakes
-createSnowflakes();
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+h1 {
+    margin-bottom: 20px;
+}
+
+.timer p {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.logs {
+    margin-top: 30px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
